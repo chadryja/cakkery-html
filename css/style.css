@@ -280,7 +280,7 @@ a:focus {
   padding: 10px 45px;
   background-color: #fa7d09;
   color: #ffffff;
-  border-radius: 0;
+  border-radius: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
@@ -382,7 +382,7 @@ a:focus {
   padding: 10px 45px;
   background-color: #fa7d09;
   color: #ffffff;
-  border-radius: 0px;
+  border-radius: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
@@ -458,7 +458,7 @@ a:focus {
   padding: 10px 40px;
   background-color: #fa7d09;
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: 15px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
@@ -545,6 +545,7 @@ a:focus {
   bottom: 0px;
   font-size: 24px;
   margin: 0 5px;
+  border-radius: 15px;
 }
 
 /* client section end */
@@ -565,7 +566,7 @@ a:focus {
   border: 1px solid #ccc;
   outline: none;
   color: #000000;
-  border-radius: 5px;
+  border-radius: 15px;
 }
 
 .contact_section .form_container input::-webkit-input-placeholder {
@@ -610,6 +611,7 @@ a:focus {
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   border: none;
+  border-radius: 15px;
 }
 
 .contact_section .form_container button:hover {

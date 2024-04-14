@@ -1,4 +1,3 @@
-// to get current year
 function getYear() {
     var currentDate = new Date();
     var currentYear = currentDate.getFullYear();
@@ -44,3 +43,43 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+
+// Function to initialize EmailJS
+function initializeEmailJS() {
+    emailjs.init({
+        publicKey: "5kZTAgODTvn7A0lxW",
+      });
+}
+
+// Function to send email using EmailJS
+function sendEmail() {
+    // Collect form data
+    var firstName = document.getElementById('firstName').value;
+    var lastName = document.getElementById('lastName').value;
+    var email = document.getElementById('email').value;
+    var phoneNumber = document.getElementById('phoneNumber').value;
+    var message = document.getElementById('message').value;
+
+    // Send email using EmailJS
+    emailjs.send("service_go0ndgg", "template_bom3rpf", {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        phoneNumber: phoneNumber,
+        message: message
+    }).then(function(response) {
+        console.log("Email sent successfully!", response);
+        // Optionally, display a success message to the user
+        alert("Your message has been sent successfully!");
+    }, function(error) {
+        console.error("Error sending email:", error);
+        // Optionally, display an error message to the user
+        alert("An error occurred while sending your message. Please try again later.");
+    });
+
+    // Prevent form from submitting
+    return false;
+}
+
+initializeEmailJS();
